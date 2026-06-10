@@ -16,7 +16,7 @@ export default function Home(){
 
   <section id="menu" style={{padding:"40px 20px"}}>
    <h2>Featured Items</h2>
-   <div style={{display:"grid",gridTemplateColumns":"repeat(auto-fit,minmax(220px,1fr))",gap:"16px"}}>
+   <div style={{display:"grid",gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))":"repeat(auto-fit,minmax(220px,1fr))",gap:"16px"}}>
    {all.map((m,i)=>(
     <div key={i} style={{background:"#161616",padding:"16px",borderRadius:"12px"}}>
       <h3>{m.name}</h3>
