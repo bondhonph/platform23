@@ -1,7 +1,7 @@
 
 "use client";
 import { useState } from "react";
-import { menuData, categories } from "./menuData";
+import { menuData } from "./menuData";
 
 export default function Home(){
  const [item,setItem]=useState("");
@@ -16,7 +16,7 @@ export default function Home(){
 
   <section id="menu" style={{padding:"40px 20px"}}>
    <h2>Featured Items</h2>
-   <div style={{display:"grid",gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))":"repeat(auto-fit,minmax(220px,1fr))",gap:"16px"}}>
+   <div   style={{     display: "grid",     gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",     gap: "16px",   }} >
    {all.map((m,i)=>(
     <div key={i} style={{background:"#161616",padding:"16px",borderRadius:"12px"}}>
       <h3>{m.name}</h3>
@@ -37,7 +37,7 @@ export default function Home(){
 
   <section id="order" style={{padding:"40px 20px"}}>
    <h2>Order</h2>
-   <input defaultValue={item} placeholder="Items" style={{width:"100%",padding:"12px"}}/>
+   <input   value={item}   onChange={(e) => setItem(e.target.value)}   placeholder="Items"   style={{ width: "100%", padding: "12px" }} />
    <p>WhatsApp: +8801772101429</p>
   </section>
 
